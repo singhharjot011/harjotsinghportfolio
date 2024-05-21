@@ -5,3 +5,4 @@ mobileMenu.classList.add("hidden");
 toggleButton.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
+

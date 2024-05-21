@@ -239,24 +239,52 @@ body {
   font-size: clamp(1.5rem, 1vw, 5rem);
 }
 
-.profile-pic {
+/* .profile-pic {
   grid-area: profile-pic;
   padding: 10px;
 }
 
 .profile-pic img {
+  display: hidden !important;
   max-height: 440px;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
 
+.profile-pic canvas {
+  width: 100% !important;
+  max-height: 440px;
+  display: block;
+} */
+
+#profile-pic {
+  grid-area: profile-pic;
+  height: 440px;
+  width: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#profile-pic canvas {
+  width: 100%;
+}
+
+#profile-pic-loading {
+  font-size: 1em;
+}
+
 @media (max-width: 780px) {
   .intro-container-content {
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      ". intro-text ."
-      ". profile-pic .";
-    /* place-items: center; */
+      "intro-text"
+      "profile-pic";
+    place-items: center;
     align-items: center;
   }
 }

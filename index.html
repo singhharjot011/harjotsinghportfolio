@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harjot Singh Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/images/portfolio dp.png" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,15 @@
       src="https://kit.fontawesome.com/f6d5cfc65c.js"
       crossorigin="anonymous"
     ></script>
-
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@v0.158.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.158.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./avatar.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -91,18 +99,15 @@
           <li>
             <ul class="mobile-menu-social-media-list">
               <li class="mobile-menu-social-media-item">
-                <a href="https://www.facebook.com"
-                  ><img src="images/facebook-icon.png" alt=""
+                <a href="https://github.com/singhharjot011" target="_blank"
+                  ><img src="/images/technology/github.png" alt=""
                 /></a>
               </li>
               <li class="mobile-menu-social-media-item">
-                <a href="https://twitter.com"
-                  ><img src="images/twitter-icon.png" alt=""
-                /></a>
-              </li>
-              <li class="mobile-menu-social-media-item">
-                <a href="https://twitter.com"
-                  ><img src="images/utube.png" alt=""
+                <a
+                  href="https://www.linkedin.com/in/singhharjot011/"
+                  target="_blank"
+                  ><img src="images/technology/linkedin.png" alt=""
                 /></a>
               </li>
             </ul>
@@ -125,8 +130,8 @@
               I Bring <span>Ideas</span> to Life in The Digital Realm
             </strong>
           </div>
-          <div class="profile-pic">
-            <img src="images/portfoliodp2.png" alt="" />
+          <div id="profile-pic">
+            <div id="profile-pic-loading"></div>
           </div>
         </div>
       </div>
